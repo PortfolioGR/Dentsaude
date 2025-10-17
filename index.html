@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENTSAÚDE Odontologia - Especialistas em Fazer Você Sorrir</title>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* CSS Otimizado */
+        :root {
+            --primary: #1a3a5f;
+            --primary-dark: #0f2a45;
+            --secondary: #34d25e;
+            --secondary-dark: #1bbb8e;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --gold-light: #f5e8c8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-dark);
+            color: white;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            color: white;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .logo span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin: 0 15px;
+        }
+        
+        .nav-menu a {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+        
+        .header-contact {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-phone {
+            margin-right: 20px;
+            font-weight: 600;
+        }
+        
+        .header-phone i {
+            color: var(--primary);
+            margin-right: 5px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary);
+            color: white;
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(26, 58, 95, 0.9) 0%, rgba(41, 96, 148, 0.7) 100%);
+            z-index: 1;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .hero-image {
+            max-width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background-color: white;
+            padding: 60px 0;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+        
+        .partners {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            gap: 30px;
+        }
+        
+        .partner-logo {
+            height: 50px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            opacity: 1;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--gold-light);
+            padding: 80px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .service-link {
+            font-weight: 600;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .service-link i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Why Choose Us Section */
+        .why-us {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .feature-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .feature-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .feature-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .feature-image {
+            flex: 1;
+            padding: 0 20px;
+        }
+        
+        .feature-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+        
+        .feature-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-description {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        /* Transformations Section - Grid Layout Aumentado */
+        .transformations {
+            background-color: var(--gold-light);
+            padding: 80px 0;
+        }
+        
+        .transformations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .transformation-case {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid var(--secondary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .transformation-case:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .case-images {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .case-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .case-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+        
+        .case-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .case-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .case-duration {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        .case-result {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Remove o slider antigo */
+        .transformations-slider,
+        .slider-controls {
+            display: none;
+        }
+        
+        .transformations-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .testimonials-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 20px 0;
+            scrollbar-width: none;
+        }
+        
+        .testimonials-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .testimonial-card {
+            flex: 0 0 auto;
+            width: calc(33.333% - 20px);
+            scroll-snap-align: start;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 5rem;
+            font-family: Georgia, serif;
+            color: rgba(26, 58, 95, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-stars {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            color: var(--gray);
+            font-style: italic;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background-color: var(--gold-light);
+            padding: 80px 0;
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .accordion-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .accordion-header i {
+            transition: transform 0.3s ease;
+            color: var(--secondary);
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-content {
+            padding: 0 20px 20px;
+            max-height: 1000px;
+        }
+        
+        .accordion-item.active .accordion-header i {
+            transform: rotate(45deg);
+        }
+        
+        .faq-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231a3a5f' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 15px) center;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p {
+            color: var(--gray);
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: 0;
+            position: relative;
+        }
+        
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+        
+        .map-info {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .map-info h3 {
+            margin-bottom: 20px;
+        }
+        
+        .map-address {
+            margin-bottom: 20px;
+        }
+        
+        .map-hours {
+            margin-bottom: 20px;
+        }
+        
+        .map-hours h4 {
+            margin-bottom: 10px;
+        }
+        
+        .map-hours p {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .map-directions {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .map-directions i {
+            margin-right: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-logo-img {
+            height: 60px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-logo span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        .footer-about {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-title {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .floating-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        
+        .floating-schedule {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .back-to-top {
+            background-color: white;
+            color: var(--primary);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                margin-bottom: 30px;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-image {
+                max-width: 80%;
+            }
+            
+            .feature-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .feature-row:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .feature-image {
+                margin-bottom: 30px;
+            }
+            
+            .transformations-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .testimonial-card {
+                width: calc(50% - 15px);
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .map-info {
+                position: static;
+                transform: none;
+                max-width: 100%;
+                margin-top: -50px;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                position: relative;
+            }
+            
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-contact {
+                display: none;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .transformations-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .case-images {
+                height: 250px;
+            }
+            
+            .testimonial-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="DENTSAÚDE" class="logo-img">
+                <div>
+                    DENTSAÚDE<br>
+                    <span>ODONTOLOGIA</span>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#why-us">Sobre Nós</a></li>
+                <li><a href="#transformations">Transformações</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            
+            <div class="header-contact">
+                <div class="header-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>(65) 99219-3455</span>
+                </div>
+                <a href="#contact" class="btn btn-primary">Agendar Consulta</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero" id="home">
+        <img src="https://assets-persist.lovart.ai/agent_images/1cfdfc3b-d5fa-42d5-9215-fb46d6fabeda.jpg" alt="Sorriso Perfeito" class="hero-bg" loading="lazy">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Somos especialistas em fazer você sorrir</h1>
+                <p class="hero-subtitle">Tenha de volta a confiança de sorrir com tratamentos dentários de excelência e resultados duradouros.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-secondary">Agendar Avaliação Gratuita</a>
+                    <a href="https://wa.me/5565992193455" class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Fale Conosco
+                    </a>
+                </div>
+            </div>
+            <img src="inicio.png" alt="Sorriso Transformado" class="hero-image" loading="lazy">
+        </div>
+    </section>
+    
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-text">Anos de Experiência</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-text">Pacientes Atendidos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10000+</div>
+                    <div class="stat-text">Procedimentos Realizados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-text">Avaliação dos Pacientes</div>
+                </div>
+            </div>
+            
+            <div class="partners">
+                <img src="uni.png" alt="Convênio 1" class="partner-logo" loading="lazy">
+                <img src="unim.png" alt="Convênio 2" class="partner-logo" loading="lazy">
+                <img src="bra.png" alt="Convênio 3" class="partner-logo" loading="lazy">
+            </div>
+        </div>
+    </section>
+    
+    <section class="services section" id="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Oferecemos uma ampla gama de tratamentos odontológicos para cuidar da sua saúde bucal e garantir um sorriso bonito e saudável.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-content">
+                        <i class="fas fa-tooth service-icon"></i>
+                        <h3 class="service-title">Implantes Dentários</h3>
+                        <p class="service-description">Substitua dentes perdidos com implantes de titânio que se integram ao osso, proporcionando função e estética natural.</p>
+                        <a href="#" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-content">
+                        <i class="fas fa-teeth service-icon"></i>
+                        <h3 class="service-title">Ortodontia</h3>
+                        <p class="service-description">Alinhe seus dentes com aparelhos modernos, incluindo opções estéticas e invisíveis para todas as idades.</p>
+                        <a href="#" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-content">
+                        <i class="fas fa-magic service-icon"></i>
+                        <h3 class="service-title">Clareamento</h3>
+                        <p class="service-description">Dentes mais brancos e brilhantes com técnicas seguras e eficazes de clareamento em consultório ou caseiro.</p>
+                        <a href="#" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-content">
+                        <i class="fas fa-smile service-icon"></i>
+                        <h3 class="service-title">Lentes de Contato</h3>
+                        <p class="service-description">Transforme seu sorriso com lentes de porcelana ultrafinas que corrigem forma, cor e pequenos desalinhamentos.</p>
+                        <a href="#" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-content">
+                        <i class="fas fa-syringe service-icon"></i>
+                        <h3 class="service-title">Tratamento de Canal</h3>
+                        <p class="service-description">Procedimento indolor que remove a infecção, alivia a dor e preserva o dente natural comprometido.</p>
+                        <a href="#" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-content">
+                        <i class="fas fa-star service-icon"></i>
+                        <h3 class="service-title">Estética Dental</h3>
+                        <p class="service-description">Procedimentos personalizados para melhorar a aparência do seu sorriso, incluindo restaurações e harmonização.</p>
+                        <a href="#" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="why-us section" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Por que nos escolher</h2>
+            <p class="section-subtitle">Na DENTSAÚDE Odontologia, combinamos tecnologia de ponta, profissionais experientes e um ambiente acolhedor para oferecer o melhor tratamento odontológico.</p>
+            
+            <div class="feature-row">
+                <div class="feature-image">
+                    <img src="equipamento.png" alt="Tecnologia Avançada" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Tecnologia Avançada</h3>
+                    <p class="feature-description">Investimos constantemente em equipamentos de última geração para diagnósticos precisos e tratamentos mais eficientes e confortáveis. Nossa clínica conta com radiografia digital, scanner intraoral e equipamentos de laser para procedimentos minimamente invasivos.</p>
+                    <a href="#" class="btn btn-primary">Conheça nossa estrutura</a>
+                </div>
+            </div>
+            
+            <div class="feature-row">
+                <div class="feature-image">
+                    <img src="equipe.png" alt="Equipe Especializada" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Equipe Especializada</h3>
+                    <p class="feature-description">Nossa equipe é formada por profissionais altamente qualificados e especializados em diversas áreas da odontologia. Todos os nossos dentistas participam regularmente de cursos de atualização para oferecer os tratamentos mais modernos e eficazes.</p>
+                    <a href="#" class="btn btn-primary">Conheça nossa equipe</a>
+                </div>
+            </div>
+            
+            <div class="feature-row">
+                <div class="feature-image">
+                    <img src="interior.png" alt="Ambiente Acolhedor" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Ambiente Acolhedor</h3>
+                    <p class="feature-description">Projetamos nossa clínica pensando no seu conforto. Desde a recepção até os consultórios, criamos um ambiente relaxante e acolhedor para tornar sua visita ao dentista uma experiência agradável, reduzindo a ansiedade e o estresse.</p>
+                    <a href="#" class="btn btn-primary">Conheça nosso espaço</a>
+                </div>
+            </div>
+            
+            <div class="feature-row">
+                <div class="feature-image">
+                    <img src="atendimento.png" alt="Atendimento Personalizado" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Atendimento Personalizado</h3>
+                    <p class="feature-description">Cada paciente é único, e por isso desenvolvemos planos de tratamento personalizados que atendem às necessidades específicas de cada pessoa. Dedicamos tempo para ouvir suas preocupações e explicar detalhadamente todas as opções de tratamento.</p>
+                    <a href="#" class="btn btn-primary">Agende uma avaliação</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="transformations section" id="transformations">
+        <div class="container">
+            <h2 class="section-title">Transformações Reais</h2>
+            <p class="section-subtitle">Confira alguns dos resultados que alcançamos para nossos pacientes. Estas são transformações reais que mudaram não apenas sorrisos, mas também a autoestima e qualidade de vida.</p>
+            
+            <div class="transformations-grid">
+                <div class="transformation-case">
+                    <img src="transformacao .png" alt="Transformação Completa" class="case-images" loading="lazy">
+                    <div class="case-content">
+                        <h3 class="case-title">Transformação Completa do Sorriso</h3>
+                        <p class="case-description">Resultado de um tratamento completo que incluiu correção de diastemas, clareamento profissional e restauração estética para um sorriso harmonioso e natural.</p>
+                        <div class="case-meta">
+                            <span class="case-duration">Duração: 6 meses</span>
+                            <span class="case-result">Resultado: Excelente</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="transformation-case">
+                    <img src="clareamento.png" alt="Clareamento Dental" class="case-images" loading="lazy">
+                    <div class="case-content">
+                        <h3 class="case-title">Clareamento Dental Profissional</h3>
+                        <p class="case-description">Sorriso revitalizado após sessões de clareamento em consultório. Resultado rápido e seguro com vários tons de diferença e sem sensibilidade.</p>
+                        <div class="case-meta">
+                            <span class="case-duration">Duração: 2 semanas</span>
+                            <span class="case-result">Resultado: Impressionante</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="transformation-case">
+                    <img src="estetica.png" alt="Ortodontia Estética" class="case-images" loading="lazy">
+                    <div class="case-content">
+                        <h3 class="case-title">Correção com Ortodontia Estética</h3>
+                        <p class="case-description">Tratamento ortodôntico com aparelhos estéticos que alinharam os dentes de forma discreta e eficiente, melhorando função e estética do sorriso.</p>
+                        <div class="case-meta">
+                            <span class="case-duration">Duração: 18 meses</span>
+                            <span class="case-result">Resultado: Perfeito</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transformations-cta">
+                <a href="#contact" class="btn btn-secondary">Quero um resultado assim</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials section">
+        <div class="container">
+            <h2 class="section-title">O que nossos pacientes dizem</h2>
+            <p class="section-subtitle">A satisfação dos nossos pacientes é o nosso maior orgulho. Confira alguns depoimentos de quem já transformou seu sorriso conosco.</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <img src="https://assets-persist.lovart.ai/agent_images/1f063220-55a7-4145-ba46-2f0686abb4a2.jpg" alt="Ana Silva" class="testimonial-image" loading="lazy">
+                    <h4 class="testimonial-name">Ana Silva</h4>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sempre tive medo de dentista, mas a equipe da DENTSAÚDE me deixou super tranquila. O tratamento foi indolor e o resultado superou todas as minhas expectativas. Agora sorrio com confiança!"</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <img src="https://assets-persist.lovart.ai/agent_images/ada131ac-82cf-4a97-823f-bc9375bd9c4e.jpg" alt="Carlos Oliveira" class="testimonial-image" loading="lazy">
+                    <h4 class="testimonial-name">Carlos Oliveira</h4>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Fiz implantes dentários após anos sofrendo com dentaduras desconfortáveis. A diferença é incrível! Posso comer o que quiser e meu sorriso parece totalmente natural. Valeu cada centavo investido."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <img src="https://assets-persist.lovart.ai/agent_images/2a8928f5-bbb5-42c3-aaa0-312697ad79f3.jpg" alt="Márcia Santos" class="testimonial-image" loading="lazy">
+                    <h4 class="testimonial-name">Márcia Santos</h4>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"As lentes de contato dental transformaram meu sorriso e minha autoestima. O atendimento foi excelente do início ao fim, com todas as etapas explicadas detalhadamente. Recomendo a todos!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq section">
+        <div class="container">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <p class="section-subtitle">Encontre respostas para as perguntas mais comuns sobre nossos tratamentos e procedimentos.</p>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Os tratamentos são dolorosos?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Não! Utilizamos técnicas modernas e anestesia adequada para garantir que todos os procedimentos sejam realizados com o mínimo de desconforto possível. Além disso, oferecemos opções de sedação para pacientes mais ansiosos.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Quanto tempo dura um implante dentário?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Com os cuidados adequados, os implantes dentários podem durar por toda a vida. É essencial manter uma boa higiene bucal e realizar consultas regulares para garantir a longevidade do tratamento.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Vocês aceitam convênios odontológicos?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Sim, trabalhamos com os principais convênios odontológicos do mercado. Entre em contato conosco para verificar se o seu plano está na nossa lista de parceiros.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Como funciona o parcelamento dos tratamentos?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Oferecemos diversas opções de pagamento, incluindo parcelamento em até 24 vezes no cartão de crédito. Durante a consulta de avaliação, apresentaremos um plano de tratamento detalhado com todas as opções de pagamento disponíveis.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Como cuidar das lentes de contato dentais em casa?
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Para manter suas lentes de contato dentais em perfeito estado, é importante seguir uma rotina de cuidados: escove os dentes após as refeições, use fio dental diariamente, evite alimentos muito duros ou pegajosos e faça visitas regulares ao dentista para manutenção.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>Não encontrou sua dúvida?</p>
+                <a href="#contact" class="btn btn-primary">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Agende sua avaliação</h2>
+            <p class="section-subtitle">Preencha o formulário abaixo para agendar uma avaliação gratuita ou entrar em contato conosco.</p>
+            
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome completo</label>
+                        <input type="text" id="name" class="form-control" placeholder="Digite seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Telefone/WhatsApp</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="(65) 00000-0000" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time" class="form-label">Melhor horário para contato</label>
+                        <select id="time" class="form-select" required>
+                            <option value="" selected disabled>Selecione um horário</option>
+                            <option value="morning">Manhã (8h às 12h)</option>
+                            <option value="afternoon">Tarde (13h às 18h)</option>
+                            <option value="evening">Noite (18h às 20h)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service" class="form-label">Serviço de interesse</label>
+                        <select id="service" class="form-select" required>
+                            <option value="" selected disabled>Selecione um serviço</option>
+                            <option value="implants">Implantes Dentários</option>
+                            <option value="orthodontics">Ortodontia</option>
+                            <option value="whitening">Clareamento</option>
+                            <option value="veneers">Lentes de Contato</option>
+                            <option value="root-canal">Tratamento de Canal</option>
+                            <option value="aesthetics">Estética Dental</option>
+                            <option value="other">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-secondary" style="width: 100%;">Agendar Agora</button>
+                    
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gray); text-align: center;">
+                        Seus dados estão seguros e não serão compartilhados com terceiros.
+                    </p>
+                </form>
+                
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefone</h4>
+                            <p>(65) 99219-3455</p>
+                            <p>(65) 99219-3455 (WhatsApp)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-mail</h4>
+                            <p>contato@dentsaude.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 8h às 20h</p>
+                            <p>Sábados: 8h às 14h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Endereço</h4>
+                            <p>Rua 28 Qda 21 N 15 Esquina com, Avenida 30</p>
+                            <p>Jardim Industriario I, Cuiabá - MT, 78098-664</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.9269230974996!2d-55.97958049999999!3d-15.648879399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939da53859c81f1b%3A0x9c0d7647845bb94c!2sDentsaude%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1760592002697!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div class="container">
+            <div class="map-info">
+                <h3>Venha nos visitar</h3>
+                
+                <div class="map-address">
+                    <p><i class="fas fa-map-marker-alt"></i> Rua 28 Qda 21 N 15 Esquina com, Avenida 30</p>
+                    <p>Jardim Industriario I, Cuiabá - MT, 78098-664</p>
+                </div>
+                
+                <div class="map-hours">
+                    <h4>Horário de Funcionamento</h4>
+                    <p><span>Segunda a Sexta:</span> <span>8h às 20h</span></p>
+                    <p><span>Sábados:</span> <span>8h às 14h</span></p>
+                    <p><span>Domingos e Feriados:</span> <span>Fechado</span></p>
+                </div>
+                
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+28+Qda+21+N+15+Esquina+com,+Avenida+30+-+Jardim+Industriario+I,+Cuiabá+-+MT,+78098-664" class="map-directions" target="_blank" rel="noopener">
+                    <i class="fas fa-directions"></i> Como chegar
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="DENTSAÚDE" class="footer-logo-img">
+                        <div>
+                            DENTSAÚDE<br>
+                            <span>ODONTOLOGIA</span>
+                        </div>
+                    </div>
+                    <p class="footer-about">A DENTSAÚDE Odontologia é referência em tratamentos odontológicos de alta qualidade, combinando tecnologia avançada e profissionais experientes para cuidar do seu sorriso.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#why-us">Sobre Nós</a></li>
+                        <li><a href="#transformations">Transformações</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Implantes Dentários</a></li>
+                        <li><a href="#">Ortodontia</a></li>
+                        <li><a href="#">Clareamento</a></li>
+                        <li><a href="#">Lentes de Contato</a></li>
+                        <li><a href="#">Tratamento de Canal</a></li>
+                        <li><a href="#">Estética Dental</a></li>
+                        <li><a href="#">Todos os Serviços</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone-alt"></i> (65) 99219-3455</p>
+                        <p><i class="fab fa-whatsapp"></i> (65) 99219-3455</p>
+                        <p><i class="fas fa-envelope"></i> contato@dentsaude.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Rua 28 Qda 21 N 15 Esquina com, Avenida 30 - Jardim Industriario I, Cuiabá - MT</p>
+                        <p><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 8h-14h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 DENTSAÚDE Odontologia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="floating-buttons">
+        <a href="https://wa.me/5565992193455" class="floating-btn floating-whatsapp" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="floating-btn back-to-top" aria-label="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+    
+    <script>
+        // Otimização do JavaScript - Funções reutilizáveis
+        const DOM = {
+            mobileMenuBtn: document.querySelector('.mobile-menu-btn'),
+            navMenu: document.querySelector('.nav-menu'),
+            accordionItems: document.querySelectorAll('.accordion-item'),
+            backToTopBtn: document.querySelector('.back-to-top'),
+            contactForm: document.querySelector('.contact-form')
+        };
+
+        // Mobile Menu Toggle
+        DOM.mobileMenuBtn?.addEventListener('click', () => {
+            DOM.navMenu.classList.toggle('active');
+        });
+
+        // Accordion Functionality
+        DOM.accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            header?.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all accordion items
+                DOM.accordionItems.forEach(accordionItem => {
+                    accordionItem.classList.remove('active');
+                });
+                
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const handleScroll = () => {
+            if (window.pageYOffset > 300) {
+                DOM.backToTopBtn?.classList.add('visible');
+            } else {
+                DOM.backToTopBtn?.classList.remove('visible');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        DOM.backToTopBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    DOM.navMenu?.classList.remove('active');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Submission
+        DOM.contactForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const time = document.getElementById('time').value;
+            
+            // Here you would typically send the data to your server
+            // For demonstration, we'll just show an alert
+            alert(`Obrigado, ${name}! Sua solicitação de agendamento foi recebida com sucesso. Entraremos em contato pelo número ${phone} no período da ${time === 'morning' ? 'manhã' : time === 'afternoon' ? 'tarde' : 'noite'}.`);
+            
+            // Reset form
+            DOM.contactForm.reset();
+        });
+
+        // Performance optimization - Defer non-critical resources
+        if ('fonts' in document) {
+            document.fonts.load('1rem "Montserrat"');
+            document.fonts.load('1rem "Open Sans"');
+        }
+    </script>
+</body>
+</html>
